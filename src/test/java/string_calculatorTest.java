@@ -47,4 +47,10 @@ public class string_calculatorTest {
     	class_test.add("-1");
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void test_negative_2() {
+    	string_calculator class_test = new string_calculator();
+    	class_test.add("-1,2,-3");
+    }
+
 }
