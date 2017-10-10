@@ -7,7 +7,13 @@ public class string_calculator {
     		return 0;
     	} else if(input.length() == 1) {
     		return Integer.parseInt(input);
+    	} else {
+    		int sum = 0;
+    		for(String s : input.split(",")) {
+    			sum += Integer.parseInt(s);
+    		}
+    		return sum;
     	}
-        return 0;
+    	
     }
 }
