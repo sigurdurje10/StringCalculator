@@ -10,4 +10,11 @@ public class string_calculatorTest {
         assertEquals(class_test.add(""), 0);
         //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
+
+    @Test public void test_add_one() {
+        string_calculator class_test = new string_calculator();
+        assertEquals(class_test.add("1"), 1);
+        //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    }
+
 }

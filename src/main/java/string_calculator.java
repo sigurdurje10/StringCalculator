@@ -5,6 +5,8 @@ public class string_calculator {
     public int add(String input) {
     	if(input.equals("")) {
     		return 0;
+    	} else if(input.length() == 1) {
+    		return Integer.parseInt(input);
     	}
         return 0;
     }
