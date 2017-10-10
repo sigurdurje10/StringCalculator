@@ -23,4 +23,10 @@ public class string_calculatorTest {
         //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
 
+    @Test public void test_add_multiple() {
+        string_calculator class_test = new string_calculator();
+        assertEquals(class_test.add("1,2,3,4,5"), 15);
+        //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    }
+
 }
