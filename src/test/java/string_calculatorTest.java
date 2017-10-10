@@ -29,4 +29,16 @@ public class string_calculatorTest {
         //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
 
+    @Test public void test_add_two_new() {
+        string_calculator class_test = new string_calculator();
+        assertEquals(class_test.add("1\n2"), 3);
+        //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    }
+
+    @Test public void test_add_multiple_new() {
+        string_calculator class_test = new string_calculator();
+        assertEquals(class_test.add("1\n2,3\n4,5"), 15);
+        //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    }
+
 }

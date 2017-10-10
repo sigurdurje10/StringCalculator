@@ -9,11 +9,11 @@ public class string_calculator {
     		return Integer.parseInt(input);
     	} else {
     		int sum = 0;
-    		for(String s : input.split(",")) {
+    		for(String s : input.split(",|\n")) {
     			sum += Integer.parseInt(s);
     		}
     		return sum;
     	}
-    	
+
     }
 }
