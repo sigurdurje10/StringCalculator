@@ -10,8 +10,23 @@ public class string_calculator {
     		return Integer.parseInt(input);
     	} else {
     		int sum = 0;
+    		int del_index_start = input.indexOf("//");
+    		int del_index_end = input.indexOf("\n");
+    		String sub_string = "";
+    		String input_split[];
+    		if(del_index_start != -1 && del_index_end != -1) {
+    			sub_string = input.substring(del_index_start+2, del_index_end);
+    			input = input.substring(del_index_end+1);
+    			//System.out.println(sub_string);
+    			//System.out.println(input);
+    			input_split = input.split(sub_string);
+    		} else {
+    			input_split = input.split(",|\n");
+    		}
+
     		ArrayList<String> negatives = new ArrayList<String>();
-    		for(String s : input.split(",|\n")) {
+    		for(String s : input_split) {
+    			//System.out.println("string: "+s);
 		    	if(s.indexOf("-") != -1) {
 		    		negatives.add(s);
 		    	} else {
@@ -37,4 +52,11 @@ public class string_calculator {
     	}
 
     }
+
+    /*public static void main(String[] args) {
+    	string_calculator st = new string_calculator();
+    	int addition; //= st.add("//;\n1;2");
+    	addition = st.add("//,\n5,7,3");
+    	System.out.println(addition);
+    }*/
 }

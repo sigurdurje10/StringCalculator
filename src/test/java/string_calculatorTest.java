@@ -59,4 +59,16 @@ public class string_calculatorTest {
         //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
 
+    @Test public void test_add_delimiter() {
+        string_calculator class_test = new string_calculator();
+        assertEquals(class_test.add("//;\n1;2"), 3);
+        //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    }
+
+    @Test public void test_add_delimiter_2() {
+        string_calculator class_test = new string_calculator();
+        assertEquals(class_test.add("//,\n5,7,3"), 15);
+        //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    }
+
 }
