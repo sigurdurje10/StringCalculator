@@ -41,4 +41,10 @@ public class string_calculatorTest {
         //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void test_negative() {
+    	string_calculator class_test = new string_calculator();
+    	class_test.add("-1");
+    }
+
 }
