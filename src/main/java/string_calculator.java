@@ -15,7 +15,10 @@ public class string_calculator {
 		    	if(s.indexOf("-") != -1) {
 		    		negatives.add(s);
 		    	} else {
-    				sum += Integer.parseInt(s);
+		    		int addition =  Integer.parseInt(s);
+		    		if(addition <= 1000) {
+	    				sum += addition;
+	    			}
 		    	}
     		}
     		String argument = "";

@@ -53,4 +53,10 @@ public class string_calculatorTest {
     	class_test.add("-1,2,-3");
     }
 
+    @Test public void test_add_over_1000() {
+        string_calculator class_test = new string_calculator();
+        assertEquals(class_test.add("1001\n2,3\n1000"), 1005);
+        //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    }
+
 }
